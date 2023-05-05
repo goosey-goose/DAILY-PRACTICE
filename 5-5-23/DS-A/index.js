@@ -5,10 +5,13 @@ const connectedComponentsCount = (graph) => {
 
   const stack = [ nodes[0] ];
 
+  let visited = new Set();
 
     while (stack.length > 0) {
         const current = stack.pop();
+        if (visited.has(current)) continue;
         console.log(current);
+        visited.add(current);
 
         for (let neighbor of graph[current]) {
             stack.push(neighbor);
