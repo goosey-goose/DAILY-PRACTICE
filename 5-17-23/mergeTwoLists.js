@@ -39,8 +39,8 @@ var mergeTwoLists = function(list1, list2) {
         }
     }
 
-    if (list1 === null) list2.next = list1
-    if (list2 === null) list1.next = list2
+    if (list1 !== null) tail.next = list1
+    if (list2 !== null) tail.next = list2
 
     return dummy.next
 };
