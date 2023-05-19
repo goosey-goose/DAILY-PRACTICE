@@ -13,8 +13,10 @@ length = 1 2 3 4
 subString = A A A A 
 
 
-1  A     2
+1        2
 A  B  A  B
+
+A  A  
 
 */
 
@@ -32,9 +34,20 @@ var characterReplacement = function(s, k) {
     let char2 = s[two]    
     
     while (two < s.length) {
-
+        //    A         B
         if (char1 !== char2) {
-
+            if (changeCharacterCount <= k) {
+                changeCharacterCount++;
+                char2 = char1;
+                subString += char2;
+                two++;
+            } 
+        } else if (char1 === char2) {
+            subString += char2;
+            two++;
         }
     }
 }
+
+
+
