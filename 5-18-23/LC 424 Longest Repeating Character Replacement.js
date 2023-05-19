@@ -17,3 +17,24 @@ subString = A A A A
 A  B  A  B
 
 */
+
+var characterReplacement = function(s, k) {
+    if (s.length === 1) return 1;
+
+    let changeCharacterCount = 0
+    let subStringLength = 0
+    let subString = ""
+
+    let one = 0
+    let two = 1
+    subString += s[one]
+    let char1 = s[one]
+    let char2 = s[two]    
+    
+    while (two < s.length) {
+
+        if (char1 !== char2) {
+
+        }
+    }
+}
