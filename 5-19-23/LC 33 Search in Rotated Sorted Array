@@ -1,0 +1,28 @@
+/**
+-grab the first and last numbers in the array.
+-compare them. if the first number is lesser, then call the function itself again with the first half of the array. 
+-compare them again. repeat.  
+-if the length of array is 2: return the lesser of the two numbers
+ */
+
+const nums = [0,1,3,4,6,8,9]
+
+//  if (nums[middle] > nums[right]) search right. Else, search left. 
+
+var findMin = function(nums, target) {
+    let firstElement = nums[0]
+    let lastElement = nums[nums.length - 1]
+    let midPointIndex = Math.floor(nums.length / 2)
+
+    if (firstElement === target) return 
+
+    if (nums[midPointIndex] > nums[nums.length - 1]) {
+        minimumElement = findMin(nums.slice(midPointIndex, nums.length), minimumElement)
+    } else {
+        minimumElement = findMin(nums.slice(0, midPointIndex + 1), minimumElement)
+    }
+
+    return minimumElement;
+}
+
+console.log(findMin(nums))
