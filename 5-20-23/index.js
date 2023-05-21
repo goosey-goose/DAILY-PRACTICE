@@ -1,3 +1,4 @@
+// EBEN, INCOMPLETE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 var search = function(nums, target) {
     if (nums.length <= 2) return nums.indexOf(target)
   // a, b, and c are indices
