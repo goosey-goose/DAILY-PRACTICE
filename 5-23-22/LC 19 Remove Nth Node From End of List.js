@@ -33,6 +33,9 @@ function ListNode(val, next) {
 // }
 
 
+const three = new ListNode(3)
+const two = new ListNode(2, three)
+const one = new ListNode(1, two)
 
 // THIS METHOD WORKS AS WELL. IT USES RECURSION.
 var removeNthFromEnd = function(head, n, previous = null, count = [0]) {
