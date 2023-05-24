@@ -1,4 +1,6 @@
 var isSameTree = function(p, q) {
+    if (p === null && q !== null) return false
+    if (q === null && p !== null) return false
     if (p === null && q === null) return true
 
     if (p.val !== q.val) {
@@ -10,5 +12,7 @@ var isSameTree = function(p, q) {
 
     if (left === false || right === false) {
         return false
+    } else {
+         return true
     }
 }
