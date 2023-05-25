@@ -3,11 +3,14 @@ var isSameTree = function(p, q) {
     if (q === null && p !== null) return false
     if (p === null && q === null) return true
 
+    let left
+    let right
+
     if (p.val !== q.val) {
         return false
     } else {
-        const left = isSameTree(p.left, q.left)
-        const right = isSameTree(p.right, q.right)
+        left = isSameTree(p.left, q.left)
+        right = isSameTree(p.right, q.right)
     }
 
     if (left === false || right === false) {
